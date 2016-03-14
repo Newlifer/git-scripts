@@ -1,1 +1,1 @@
-./gitbranch.sh feature $1
+gitbranch feature $1
