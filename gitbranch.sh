@@ -1,9 +1,7 @@
 argc=$#
 if [ $argc -eq 0 -o $argc -eq 1 ]
 then
-   echo "Some arguments are not specified!"
-   echo "You should explicitly pass by arguments in this way:"
-   echo "gitbranch [feature|bugfix] <branch name>"
+   echo "usage: gitbranch feature|bugfix <name>"
    exit 1
 fi
 
