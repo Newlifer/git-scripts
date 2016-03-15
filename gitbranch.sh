@@ -1,7 +1,9 @@
 argc=$#
 if [ $argc -eq 0 -o $argc -eq 1 ]
 then
-   echo "usage: gitbranch feature|bugfix <name>"
+   echo "Some arguments are not specified!"
+   echo "You should explicitly pass by arguments in this way:"
+   echo "gitbranch [feature|bugfix] <branch name>"
    exit 1
 fi
 
@@ -10,7 +12,7 @@ echo "Current branch: $brnch";
 
 rcname=$(echo $brnch | sed 's/rc-//g');
 
-if [[ $rcname == *"rc-"* ]]
+if [[ $brnch == *"rc-"* ]]
 then
    rootname=$rcname;
 else
